@@ -29,10 +29,12 @@ def index(request):
 
 def latest_reviews(request):
     """
+
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('per_page', 10, type=int)
     reviews_paged = Review.query.order_by(Review.id.desc()).paginate(page=page, per_page=per_page)
     return render_template('latest-reviews.html', reviews=reviews_paged, title='全站最新点评', this_module='home.latest_reviews')
+    tips: this.module 是标记当前模版名称的, flask相关用法
     """
     reviews_paged = {
         'total': 234,
