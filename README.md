@@ -1,2 +1,2 @@
 # mock_template
-For frontend develop 
+mock django for frontend develop 
